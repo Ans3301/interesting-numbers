@@ -13,6 +13,9 @@
 		E24B02AA2D2E82DD0005CBC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B029C2D2E82DD0005CBC4 /* AppDelegate.swift */; };
 		E24B02AB2D2E82DD0005CBC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B02A32D2E82DD0005CBC4 /* SceneDelegate.swift */; };
 		E24B02AC2D2E82DD0005CBC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B02A42D2E82DD0005CBC4 /* ViewController.swift */; };
+		E24B02B62D2E86570005CBC4 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E24B02B52D2E86570005CBC4 /* OpenSans-Light.ttf */; };
+		E24B02B82D2E86650005CBC4 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E24B02B72D2E86650005CBC4 /* OpenSans-SemiBold.ttf */; };
+		E24B02BA2D2E86740005CBC4 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E24B02B92D2E86740005CBC4 /* OpenSans-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		E24B02A12D2E82DD0005CBC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E24B02A32D2E82DD0005CBC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E24B02A42D2E82DD0005CBC4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E24B02B52D2E86570005CBC4 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		E24B02B72D2E86650005CBC4 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		E24B02B92D2E86740005CBC4 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +115,7 @@
 		E24B02B22D2E83710005CBC4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E24B02B42D2E86260005CBC4 /* Fonts */,
 				E24B029D2D2E82DD0005CBC4 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -121,6 +128,16 @@
 				E24B02A22D2E82DD0005CBC4 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E24B02B42D2E86260005CBC4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				E24B02B92D2E86740005CBC4 /* OpenSans-Bold.ttf */,
+				E24B02B72D2E86650005CBC4 /* OpenSans-SemiBold.ttf */,
+				E24B02B52D2E86570005CBC4 /* OpenSans-Light.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +203,9 @@
 			files = (
 				E24B02A62D2E82DD0005CBC4 /* Assets.xcassets in Resources */,
 				E24B02A82D2E82DD0005CBC4 /* LaunchScreen.storyboard in Resources */,
+				E24B02BA2D2E86740005CBC4 /* OpenSans-Bold.ttf in Resources */,
+				E24B02B82D2E86650005CBC4 /* OpenSans-SemiBold.ttf in Resources */,
+				E24B02B62D2E86570005CBC4 /* OpenSans-Light.ttf in Resources */,
 				E24B02A92D2E82DD0005CBC4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
