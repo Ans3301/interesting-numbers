@@ -15,6 +15,8 @@
 		E24B02B62D2E86570005CBC4 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E24B02B52D2E86570005CBC4 /* OpenSans-Light.ttf */; };
 		E24B02B82D2E86650005CBC4 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E24B02B72D2E86650005CBC4 /* OpenSans-SemiBold.ttf */; };
 		E24B02BA2D2E86740005CBC4 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E24B02B92D2E86740005CBC4 /* OpenSans-Bold.ttf */; };
+		E24B02BD2D2E89980005CBC4 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E24B02BC2D2E89980005CBC4 /* SwifterSwift */; };
+		E24B02C12D2E99880005CBC4 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B02C02D2E99730005CBC4 /* DiceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,7 @@
 		E24B02B52D2E86570005CBC4 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		E24B02B72D2E86650005CBC4 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		E24B02B92D2E86740005CBC4 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		E24B02C02D2E99730005CBC4 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24B02BD2D2E89980005CBC4 /* SwifterSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,7 @@
 		E24B02AE2D2E831D0005CBC4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E24B02C02D2E99730005CBC4 /* DiceView.swift */,
 				E24B02B32D2E83A10005CBC4 /* Storyboards */,
 			);
 			path = View;
@@ -154,6 +159,7 @@
 			);
 			name = "interesting-numbers";
 			packageProductDependencies = (
+				E24B02BC2D2E89980005CBC4 /* SwifterSwift */,
 			);
 			productName = "interesting-numbers";
 			productReference = E24B02742D2E818D0005CBC4 /* interesting-numbers.app */;
@@ -183,6 +189,9 @@
 			);
 			mainGroup = E24B026B2D2E818D0005CBC4;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E24B02BB2D2E89980005CBC4 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E24B02752D2E818D0005CBC4 /* Products */;
 			projectDirPath = "";
@@ -214,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E24B02AA2D2E82DD0005CBC4 /* AppDelegate.swift in Sources */,
+				E24B02C12D2E99880005CBC4 /* DiceView.swift in Sources */,
 				E24B02AB2D2E82DD0005CBC4 /* SceneDelegate.swift in Sources */,
 				E24B02AC2D2E82DD0005CBC4 /* ViewController.swift in Sources */,
 			);
@@ -430,6 +440,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E24B02BB2D2E89980005CBC4 /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E24B02BC2D2E89980005CBC4 /* SwifterSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E24B02BB2D2E89980005CBC4 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
+			productName = SwifterSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E24B026C2D2E818D0005CBC4 /* Project object */;
 }
