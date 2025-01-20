@@ -24,6 +24,16 @@
 		E24B02CB2D3051590005CBC4 /* fetchFactFromAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B02CA2D3051540005CBC4 /* fetchFactFromAPI.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E24B02D62D3E9CA00005CBC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E24B026C2D2E818D0005CBC4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E24B02732D2E818D0005CBC4;
+			remoteInfo = "interesting-numbers";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		E24B02742D2E818D0005CBC4 /* interesting-numbers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "interesting-numbers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E24B029C2D2E82DD0005CBC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +51,16 @@
 		E24B02C62D3036320005CBC4 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		E24B02C82D3050070005CBC4 /* FactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewController.swift; sourceTree = "<group>"; };
 		E24B02CA2D3051540005CBC4 /* fetchFactFromAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchFactFromAPI.swift; sourceTree = "<group>"; };
+		E24B02D02D3E9CA00005CBC4 /* InterestingNumbersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterestingNumbersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		E24B02D12D3E9CA00005CBC4 /* InterestingNumbersUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = InterestingNumbersUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E24B02712D2E818D0005CBC4 /* Frameworks */ = {
@@ -52,6 +71,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E24B02CD2D3E9CA00005CBC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -59,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				E24B02A52D2E82DD0005CBC4 /* interesting-numbers */,
+				E24B02D12D3E9CA00005CBC4 /* InterestingNumbersUITests */,
 				E24B02752D2E818D0005CBC4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -67,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				E24B02742D2E818D0005CBC4 /* interesting-numbers.app */,
+				E24B02D02D3E9CA00005CBC4 /* InterestingNumbersUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,6 +208,29 @@
 			productReference = E24B02742D2E818D0005CBC4 /* interesting-numbers.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E24B02CF2D3E9CA00005CBC4 /* InterestingNumbersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E24B02DA2D3E9CA00005CBC4 /* Build configuration list for PBXNativeTarget "InterestingNumbersUITests" */;
+			buildPhases = (
+				E24B02CC2D3E9CA00005CBC4 /* Sources */,
+				E24B02CD2D3E9CA00005CBC4 /* Frameworks */,
+				E24B02CE2D3E9CA00005CBC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E24B02D72D3E9CA00005CBC4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				E24B02D12D3E9CA00005CBC4 /* InterestingNumbersUITests */,
+			);
+			name = InterestingNumbersUITests;
+			packageProductDependencies = (
+			);
+			productName = InterestingNumbersUITests;
+			productReference = E24B02D02D3E9CA00005CBC4 /* InterestingNumbersUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -192,6 +243,10 @@
 				TargetAttributes = {
 					E24B02732D2E818D0005CBC4 = {
 						CreatedOnToolsVersion = 16.2;
+					};
+					E24B02CF2D3E9CA00005CBC4 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = E24B02732D2E818D0005CBC4;
 					};
 				};
 			};
@@ -213,6 +268,7 @@
 			projectRoot = "";
 			targets = (
 				E24B02732D2E818D0005CBC4 /* interesting-numbers */,
+				E24B02CF2D3E9CA00005CBC4 /* InterestingNumbersUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -227,6 +283,13 @@
 				E24B02BA2D2E86740005CBC4 /* OpenSans-Bold.ttf in Resources */,
 				E24B02B82D2E86650005CBC4 /* OpenSans-SemiBold.ttf in Resources */,
 				E24B02B62D2E86570005CBC4 /* OpenSans-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E24B02CE2D3E9CA00005CBC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,7 +312,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E24B02CC2D3E9CA00005CBC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E24B02D72D3E9CA00005CBC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E24B02732D2E818D0005CBC4 /* interesting-numbers */;
+			targetProxy = E24B02D62D3E9CA00005CBC4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E24B02A02D2E82DD0005CBC4 /* LaunchScreen.storyboard */ = {
@@ -438,6 +516,38 @@
 			};
 			name = Release;
 		};
+		E24B02D82D3E9CA00005CBC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.InterestingNumbersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "interesting-numbers";
+			};
+			name = Debug;
+		};
+		E24B02D92D3E9CA00005CBC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mycompany.InterestingNumbersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "interesting-numbers";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -455,6 +565,15 @@
 			buildConfigurations = (
 				E24B02882D2E818F0005CBC4 /* Debug */,
 				E24B02892D2E818F0005CBC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E24B02DA2D3E9CA00005CBC4 /* Build configuration list for PBXNativeTarget "InterestingNumbersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E24B02D82D3E9CA00005CBC4 /* Debug */,
+				E24B02D92D3E9CA00005CBC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

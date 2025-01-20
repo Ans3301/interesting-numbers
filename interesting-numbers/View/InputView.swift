@@ -61,6 +61,8 @@ final class InputView: UIView {
         textField.delegate = self
         
         addSubview(textField)
+        
+        textField.accessibilityIdentifier = "textField"
 
         NSLayoutConstraint.activate([
             textField.centerXAnchor.constraint(equalTo: centerXAnchor),
@@ -76,6 +78,10 @@ final class InputView: UIView {
     
     func getText() -> String? {
         return textField.text
+    }
+    
+    func textFieldIsEditing() -> Bool {
+        return textField.isEditing
     }
 }
 

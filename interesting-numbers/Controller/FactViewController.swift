@@ -52,9 +52,11 @@ final class FactViewController: UIViewController {
     }
     
     private func setupNumberLabel() {
-        numberLabel.text = String(Int(facts[0].number))
+        numberLabel.text = String(Int64(facts[0].number))
         
         view.addSubview(numberLabel)
+        
+        numberLabel.accessibilityIdentifier = "numberLabel"
 
         NSLayoutConstraint.activate([
             numberLabel.widthAnchor.constraint(equalToConstant: 327),
@@ -72,6 +74,8 @@ final class FactViewController: UIViewController {
         label.text = text
         
         view.addSubview(label)
+        
+        label.accessibilityIdentifier = "label"
 
         NSLayoutConstraint.activate([
             label.widthAnchor.constraint(equalToConstant: 327),
@@ -83,6 +87,8 @@ final class FactViewController: UIViewController {
     
     private func setupBackButton() {
         view.addSubview(backButton)
+        
+        backButton.accessibilityIdentifier = "backButton"
 
         NSLayoutConstraint.activate([
             backButton.widthAnchor.constraint(equalToConstant: 24),

@@ -79,6 +79,8 @@ final class ViewController: UIViewController {
 
     private func setupTitleLabel() {
         view.addSubview(titleLabel)
+        
+        titleLabel.accessibilityIdentifier = "titleLabel"
 
         NSLayoutConstraint.activate([
             titleLabel.widthAnchor.constraint(equalToConstant: 320),
@@ -90,6 +92,8 @@ final class ViewController: UIViewController {
 
     private func setupSubtitleLabel() {
         view.addSubview(subtitleLabel)
+        
+        subtitleLabel.accessibilityIdentifier = "subtitleLabel"
 
         NSLayoutConstraint.activate([
             subtitleLabel.widthAnchor.constraint(equalToConstant: 242),
@@ -101,6 +105,8 @@ final class ViewController: UIViewController {
 
     private func setupDiceView() {
         view.addSubview(diceView)
+        
+        diceView.accessibilityIdentifier = "diceView"
 
         NSLayoutConstraint.activate([
             diceView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -115,6 +121,11 @@ final class ViewController: UIViewController {
         randomNumberButton.setTitle("Random number", for: .normal)
         numberInRangeButton.setTitle("Number in a range", for: .normal)
         multipleNumbersButton.setTitle("Multiple numbers", for: .normal)
+        
+        userNumberButton.accessibilityIdentifier = "userNumberButton"
+        randomNumberButton.accessibilityIdentifier = "randomNumberButton"
+        numberInRangeButton.accessibilityIdentifier = "numberInRangeButton"
+        multipleNumbersButton.accessibilityIdentifier = "multipleNumbersButton"
         
         userNumberButton.isSelected = true
         
@@ -131,6 +142,8 @@ final class ViewController: UIViewController {
         buttonsStackView.distribution = .equalSpacing
         
         view.addSubview(buttonsStackView)
+        
+        buttonsStackView.accessibilityIdentifier = "buttonsStackView"
 
         NSLayoutConstraint.activate([
             buttonsStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -156,6 +169,11 @@ final class ViewController: UIViewController {
     
     private func setupEnterView() {
         view.addSubview(enterView)
+        
+        enterView.accessibilityIdentifier = "enterView"
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
 
         NSLayoutConstraint.activate([
             enterView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -165,8 +183,26 @@ final class ViewController: UIViewController {
         ])
     }
     
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if enterView.textFieldIsEditing() {
+                if self.view.frame.origin.y == 0 {
+                    self.view.frame.origin.y -= keyboardSize.height / 3 * 2
+                }
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+
     private func setupDisplayButton() {
         view.addSubview(displayButton)
+        
+        displayButton.accessibilityIdentifier = "displayButton"
         
         NSLayoutConstraint.activate([
             displayButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -230,5 +266,10 @@ final class ViewController: UIViewController {
         alert.addAction(ok)
         
         present(alert, animated: true)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 }
