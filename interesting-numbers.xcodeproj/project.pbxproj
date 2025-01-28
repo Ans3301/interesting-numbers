@@ -21,7 +21,7 @@
 		E24B02C52D3035EF0005CBC4 /* CustomTextPaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B02C42D3035EB0005CBC4 /* CustomTextPaddingTextField.swift */; };
 		E24B02C72D3036360005CBC4 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B02C62D3036320005CBC4 /* InputView.swift */; };
 		E24B02C92D3050070005CBC4 /* FactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B02C82D3050070005CBC4 /* FactViewController.swift */; };
-		E24B02CB2D3051590005CBC4 /* fetchFactFromAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B02CA2D3051540005CBC4 /* fetchFactFromAPI.swift */; };
+		E24B02CB2D3051590005CBC4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B02CA2D3051540005CBC4 /* APIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		E24B02C42D3035EB0005CBC4 /* CustomTextPaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextPaddingTextField.swift; sourceTree = "<group>"; };
 		E24B02C62D3036320005CBC4 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		E24B02C82D3050070005CBC4 /* FactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewController.swift; sourceTree = "<group>"; };
-		E24B02CA2D3051540005CBC4 /* fetchFactFromAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fetchFactFromAPI.swift; sourceTree = "<group>"; };
+		E24B02CA2D3051540005CBC4 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		E24B02D02D3E9CA00005CBC4 /* InterestingNumbersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterestingNumbersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -153,7 +153,7 @@
 		E24B02B12D2E83650005CBC4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				E24B02CA2D3051540005CBC4 /* fetchFactFromAPI.swift */,
+				E24B02CA2D3051540005CBC4 /* APIService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -307,7 +307,7 @@
 				E24B02C52D3035EF0005CBC4 /* CustomTextPaddingTextField.swift in Sources */,
 				E24B02C12D2E99880005CBC4 /* DiceView.swift in Sources */,
 				E24B02AB2D2E82DD0005CBC4 /* SceneDelegate.swift in Sources */,
-				E24B02CB2D3051590005CBC4 /* fetchFactFromAPI.swift in Sources */,
+				E24B02CB2D3051590005CBC4 /* APIService.swift in Sources */,
 				E24B02AC2D2E82DD0005CBC4 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

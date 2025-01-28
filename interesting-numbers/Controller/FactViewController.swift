@@ -59,27 +59,21 @@ final class FactViewController: UIViewController {
         numberLabel.accessibilityIdentifier = "numberLabel"
 
         NSLayoutConstraint.activate([
-            numberLabel.widthAnchor.constraint(equalToConstant: 327),
-            numberLabel.heightAnchor.constraint(equalToConstant: 38),
+            numberLabel.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
             numberLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 88),
             numberLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
     
     private func setupLabel() {
-        var text = ""
-        for fact in facts {
-            text += "\(fact.text)\n"
-        }
-        label.text = text
+        label.text = facts.map { $0.text }.joined(separator: "\n")
         
         view.addSubview(label)
         
         label.accessibilityIdentifier = "label"
 
         NSLayoutConstraint.activate([
-            label.widthAnchor.constraint(equalToConstant: 327),
-            label.heightAnchor.constraint(equalToConstant: 238),
+            label.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.87),
             label.topAnchor.constraint(equalTo: view.topAnchor, constant: 150),
             label.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
