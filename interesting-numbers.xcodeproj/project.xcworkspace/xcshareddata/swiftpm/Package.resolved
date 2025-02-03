@@ -1,6 +1,15 @@
 {
-  "originHash" : "f99645e5665ca8f1a932c2fb4590fdfa4c2b089b9b69629ed62a22502a4fc5a7",
+  "originHash" : "41a887bd781f0d473f809215bf2c0b3899aba533dfed6f2c40831654738249b2",
   "pins" : [
+    {
+      "identity" : "numfacts",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Ans3301/NumFacts",
+      "state" : {
+        "branch" : "main",
+        "revision" : "7134ec10baa61e73e53a11ac8f7050426e093baa"
+      }
+    },
     {
       "identity" : "swifterswift",
       "kind" : "remoteSourceControl",

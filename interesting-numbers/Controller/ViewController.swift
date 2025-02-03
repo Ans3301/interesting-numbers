@@ -5,8 +5,29 @@
 //  Created by Мария Анисович on 08.01.2025.
 //
 
+import NumFacts
 import SwifterSwift
 import UIKit
+
+enum UserValidationError: Error {
+    case unsuccessfulValidation(ValidationError)
+    case emptyOneNumberInput
+    case emptySeveralNumberInput
+    case redundantInput
+
+    var errorMessage: String {
+        switch self {
+        case .emptyOneNumberInput:
+            return "Please enter number."
+        case .emptySeveralNumberInput:
+            return "Please enter numbers."
+        case .redundantInput:
+            return "Please enter only one number."
+        case .unsuccessfulValidation(let validationError):
+            return validationError.errorMessage
+        }
+    }
+}
 
 final class ViewController: UIViewController {
     private lazy var titleLabel: UILabel = {
@@ -71,7 +92,7 @@ final class ViewController: UIViewController {
         return button
     }()
     
-    private let apiService = APIService()
+    private let numFacts = NumFacts()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -219,10 +240,10 @@ final class ViewController: UIViewController {
     @objc private func displayButtonTapped(_ button: UIButton) {
         Task {
             do {
-                let numberType = self.getNumberType()
-                let text = self.enterView.getText()
-                let facts = try await self.apiService.fetchFactFromAPI(numberType: numberType, string: text)
+                let facts = try await getFacts()
                 self.present(facts: facts)
+            } catch let error as UserValidationError {
+                self.presentAlert(text: error.errorMessage)
             } catch let error as ValidationError {
                 self.presentAlert(text: error.errorMessage)
             } catch {
@@ -230,19 +251,90 @@ final class ViewController: UIViewController {
             }
         }
     }
-
-    private func getNumberType() -> NumberType {
+    
+    private func getFacts() async throws -> [Fact] {
+        var facts: [Fact] = []
+        
         if userNumberButton.isSelected {
-            return .userNumber
+            let fact = try await getFactAboutNumber()
+            facts.append(fact)
         } else if randomNumberButton.isSelected {
-            return .randomNumber
+            let fact = try await getFactAboutRandomNumber()
+            facts.append(fact)
         } else if numberInRangeButton.isSelected {
-            return .numberInRange
+            let fact = try await getFactAboutRandomNumberInRange()
+            facts.append(fact)
         } else {
-            return .multipleNumbers
+            facts = try await getFactsAboutMultipleNumbers()
         }
+        
+        return facts
     }
     
+    private func getFactAboutNumber() async throws -> Fact {
+        let text = enterView.getText()
+        
+        guard let string = text?.trimmingCharacters(in: .whitespaces),
+              !string.isEmpty
+        else {
+            throw UserValidationError.emptyOneNumberInput
+        }
+
+        guard string.components(separatedBy: " ").count == 1 else {
+            throw UserValidationError.redundantInput
+        }
+        
+        guard let number = Int64(string) else {
+            throw UserValidationError.emptyOneNumberInput
+        }
+        
+        return try await numFacts.factAboutNumber(number: number)
+    }
+    
+    private func getFactAboutRandomNumber() async throws -> Fact {
+        return try await numFacts.factAboutRandomNumber()
+    }
+    
+    private func getFactAboutRandomNumberInRange() async throws -> Fact {
+        let text = enterView.getText()
+        
+        guard let numbers = text?.trimmingCharacters(in: .whitespaces).components(separatedBy: " "),
+              !numbers.isEmpty
+        else {
+            throw UserValidationError.emptySeveralNumberInput
+        }
+
+        guard numbers.count == 2,
+              let min = Int64(numbers[0]),
+              let max = Int64(numbers[1])
+        else {
+            throw UserValidationError.unsuccessfulValidation(.incorrectRangeInput)
+        }
+
+        return try await numFacts.factAboutRandomNumberInRange(min: min, max: max)
+    }
+    
+    private func getFactsAboutMultipleNumbers() async throws -> [Fact] {
+        let text = enterView.getText()
+        
+        guard let numbers = text?.trimmingCharacters(in: .whitespaces).components(separatedBy: " "),
+              !numbers.isEmpty
+        else {
+            throw UserValidationError.emptySeveralNumberInput
+        }
+
+        guard numbers.count > 1 else {
+            throw UserValidationError.unsuccessfulValidation(.insufficientInput)
+        }
+        
+        let array = numbers.map { Int64($0) }
+        if array.contains(nil) {
+            throw UserValidationError.emptySeveralNumberInput
+        }
+        
+        return try await numFacts.factsAboutMultipleNumbers(numbers: array.compactMap { $0 })
+    }
+
     private func present(facts: [Fact]) {
         let factViewController = FactViewController()
         factViewController.facts = facts
