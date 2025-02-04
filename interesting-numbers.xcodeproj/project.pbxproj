@@ -15,13 +15,13 @@
 		E24B02B62D2E86570005CBC4 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E24B02B52D2E86570005CBC4 /* OpenSans-Light.ttf */; };
 		E24B02B82D2E86650005CBC4 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E24B02B72D2E86650005CBC4 /* OpenSans-SemiBold.ttf */; };
 		E24B02BA2D2E86740005CBC4 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E24B02B92D2E86740005CBC4 /* OpenSans-Bold.ttf */; };
-		E24B02BD2D2E89980005CBC4 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E24B02BC2D2E89980005CBC4 /* SwifterSwift */; };
 		E24B02C12D2E99880005CBC4 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B02C02D2E99730005CBC4 /* DiceView.swift */; };
 		E24B02C32D2ED5F30005CBC4 /* NumberTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B02C22D2ED5D70005CBC4 /* NumberTypeButton.swift */; };
 		E24B02C52D3035EF0005CBC4 /* CustomTextPaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B02C42D3035EB0005CBC4 /* CustomTextPaddingTextField.swift */; };
 		E24B02C72D3036360005CBC4 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B02C62D3036320005CBC4 /* InputView.swift */; };
 		E24B02C92D3050070005CBC4 /* FactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B02C82D3050070005CBC4 /* FactViewController.swift */; };
-		E24B02CB2D3051590005CBC4 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24B02CA2D3051540005CBC4 /* APIService.swift */; };
+		E2BEA70F2D50DC46006CB1E9 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E2BEA70E2D50DC46006CB1E9 /* SwifterSwift */; };
+		E2BEA7122D50DCA2006CB1E9 /* NumFacts in Frameworks */ = {isa = PBXBuildFile; productRef = E2BEA7112D50DCA2006CB1E9 /* NumFacts */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,6 @@
 		E24B02C42D3035EB0005CBC4 /* CustomTextPaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextPaddingTextField.swift; sourceTree = "<group>"; };
 		E24B02C62D3036320005CBC4 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		E24B02C82D3050070005CBC4 /* FactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactViewController.swift; sourceTree = "<group>"; };
-		E24B02CA2D3051540005CBC4 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		E24B02D02D3E9CA00005CBC4 /* InterestingNumbersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InterestingNumbersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -67,7 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E24B02BD2D2E89980005CBC4 /* SwifterSwift in Frameworks */,
+				E2BEA70F2D50DC46006CB1E9 /* SwifterSwift in Frameworks */,
+				E2BEA7122D50DCA2006CB1E9 /* NumFacts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +153,6 @@
 		E24B02B12D2E83650005CBC4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				E24B02CA2D3051540005CBC4 /* APIService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -202,7 +201,8 @@
 			);
 			name = "interesting-numbers";
 			packageProductDependencies = (
-				E24B02BC2D2E89980005CBC4 /* SwifterSwift */,
+				E2BEA70E2D50DC46006CB1E9 /* SwifterSwift */,
+				E2BEA7112D50DCA2006CB1E9 /* NumFacts */,
 			);
 			productName = "interesting-numbers";
 			productReference = E24B02742D2E818D0005CBC4 /* interesting-numbers.app */;
@@ -260,7 +260,8 @@
 			mainGroup = E24B026B2D2E818D0005CBC4;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				E24B02BB2D2E89980005CBC4 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+				E2BEA70D2D50DC46006CB1E9 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
+				E2BEA7102D50DCA2006CB1E9 /* XCRemoteSwiftPackageReference "NumFacts" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E24B02752D2E818D0005CBC4 /* Products */;
@@ -307,7 +308,6 @@
 				E24B02C52D3035EF0005CBC4 /* CustomTextPaddingTextField.swift in Sources */,
 				E24B02C12D2E99880005CBC4 /* DiceView.swift in Sources */,
 				E24B02AB2D2E82DD0005CBC4 /* SceneDelegate.swift in Sources */,
-				E24B02CB2D3051590005CBC4 /* APIService.swift in Sources */,
 				E24B02AC2D2E82DD0005CBC4 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -581,7 +581,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E24B02BB2D2E89980005CBC4 /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
+		E2BEA70D2D50DC46006CB1E9 /* XCRemoteSwiftPackageReference "SwifterSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwifterSwift/SwifterSwift";
 			requirement = {
@@ -589,13 +589,26 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		E2BEA7102D50DCA2006CB1E9 /* XCRemoteSwiftPackageReference "NumFacts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Ans3301/NumFacts";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E24B02BC2D2E89980005CBC4 /* SwifterSwift */ = {
+		E2BEA70E2D50DC46006CB1E9 /* SwifterSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E24B02BB2D2E89980005CBC4 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
+			package = E2BEA70D2D50DC46006CB1E9 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
 			productName = SwifterSwift;
+		};
+		E2BEA7112D50DCA2006CB1E9 /* NumFacts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E2BEA7102D50DCA2006CB1E9 /* XCRemoteSwiftPackageReference "NumFacts" */;
+			productName = NumFacts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

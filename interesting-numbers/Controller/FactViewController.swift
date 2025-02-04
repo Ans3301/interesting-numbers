@@ -5,6 +5,7 @@
 //  Created by Мария Анисович on 09.01.2025.
 //
 
+import NumFacts
 import SwifterSwift
 import UIKit
 
